@@ -1,2 +1,11 @@
 ## TryHackMe
 
+### What is it?
+TryHackMe is a free online platform which uses exercises and labs to teach cyber security. Whilst TryHackMe offers a free plan, there is also a paid plan which allows access to more labs and training plans. Labs often contain tasks, which when completed gives a flag. The writeup for each lab will not contain the full flag.
+
+### My Profile
+<h3 align="center">
+  <b><a href="https://tryhackme.com/p/jodie9779">tryhackme/jodie9779</a></b>
+  <br>
+  <a href="https://tryhackme.com/p/jodie9779"> <img src="https://tryhackme-badges.s3.amazonaws.com/jodie9779.png" alt="TryHackMe"></a>
+</h3>
