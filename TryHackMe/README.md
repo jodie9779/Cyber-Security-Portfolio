@@ -5,7 +5,7 @@ TryHackMe is a free online platform which uses exercises and labs to teach cyber
 
 ### My Profile
 <h3 align="center">
-  <b><a href="https://tryhackme.com/p/jodie9779">tryhackme/jodie9779</a></b>
+  <b><a href="https://tryhackme.com/p/jodie9779">tryhackme/jodie9779</a> (Top 2%)</b>
   <br>
-  <a href="https://tryhackme.com/p/jodie9779"> <img src="https://tryhackme-badges.s3.amazonaws.com/jodie9779.png" alt="TryHackMe"></a>
+  <a <script src="https://tryhackme.com/badge/313972"></script></a>
 </h3>
