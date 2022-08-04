@@ -10,6 +10,7 @@ Reverse shell exploit, SUID privilege escalation
 https://tryhackme.com/room/rrootme
 
 ### Writeup
+
 #### Reconnaissance
 
 • I started with a quick nmap scan to show the open ports, then a more in-depth nmap scan to get more information about the ports open
@@ -34,7 +35,7 @@ https://tryhackme.com/room/rrootme
 
 • All the information obtained through these scans was enough to answer all the questions within this task
 
-### Getting a Shell
+#### Getting a Shell
 
 • The first thing I tried to upload was the php reverse shell from pentestmonkey. A message quickly came up to say php files were not allowed
 
@@ -55,7 +56,7 @@ https://tryhackme.com/room/rrootme
 
 <!--- ADD IMAGE TO FIND COMMAND --->
 
-### Privilege escalation
+#### Privilege escalation
 
 • I used the find command to find the files owned by the root user which had SUID permissions, which allowed me to spot a file I could use for privilege     escalation
 
