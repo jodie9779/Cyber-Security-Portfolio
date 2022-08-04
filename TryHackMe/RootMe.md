@@ -54,7 +54,8 @@ https://tryhackme.com/room/rrootme
 ![image](https://github.com/jodie9779/Cyber-Security-Portfolio/blob/main/images/nc%20rootme.png)
 
 • I used the find command to find the 'user.txt' file which contained the flag to this task
-    find / -name user.txt 2>/dev/null
+
+     find / -name user.txt 2>/dev/null
 
 #### Privilege escalation
 
