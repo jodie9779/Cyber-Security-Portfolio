@@ -4,6 +4,7 @@
 Easy
 
 ### Skills gained
+Cron job exloitation, web exploits, wireshark
 
 ### Link
 https://tryhackme.com/room/startup
@@ -14,24 +15,27 @@ https://tryhackme.com/room/startup
 
     nmap -T4 -p- TARGETIP
 
-<1--- INSERT NMAP SCAN 1 --->
+![image](https://github.com/jodie9779/Cyber-Security-Portfolio/blob/main/images/startup/startup%20nmap%20basic.png)
+
 
 • I then ran a more in-depth nmap scan to discover more about these open ports
 
     nmap -T4 -A -p21,22,80 TARGETIP
 
-<!--- INSERT NMAP SCAN 2 --->
+
+![image](https://github.com/jodie9779/Cyber-Security-Portfolio/blob/main/images/startup/startup%20nmap%20advanced.png)
 
 • I also ran a dirb scan to see if we could find any hidden directories
     dirb http://TARGETIP wordlist.txt
 
-<!--- INSERT DIRB SCAN --->
+
+![image](https://github.com/jodie9779/Cyber-Security-Portfolio/blob/main/images/startup/startup%20dirb.png)
 
 • This scan found a files directory
 
 • The initial landing page stated that the site was in development. No extra information could be gained from looking at the source code
 
-<!--- INSERT IMAGE OF LANDING PAGE --->
+![image](https://github.com/jodie9779/Cyber-Security-Portfolio/blob/main/images/startup/startup%20landing%20page.png)
 
 • There us a 'contact us' button on this page, which looks like it is meant to contain an email address however it does not
 
@@ -45,7 +49,7 @@ https://tryhackme.com/room/startup
 
 • There were 2 files on the FTP server, which I was able to download. These files were the same as the ones shown on the files page as well as having a hidden file on .test.log
 
-<!--- INSERT IMAGE OF THE FILES AVAILABLE --->
+![image](https://github.com/jodie9779/Cyber-Security-Portfolio/blob/main/images/startup/startup%20ftp%20files.png)
 
 • notice.txt was a note to stop leaving amongus files on the server. It didn't give a lot of information away, but it did let us know that someone called Maya works at the company. The other two files did not show anything
 
@@ -59,7 +63,7 @@ https://tryhackme.com/room/startup
 
 • I set up a listener, then went to the files page and clicked on the reverse shell, which gave me a shell and the first ingredient!
 
-<!--- IMAGE OF SHELL ON PAGE --->
+![image](https://github.com/jodie9779/Cyber-Security-Portfolio/blob/main/images/startup/startup%20reverse%20shell%20upload.png)
 
 • I then had to try and escalate my privileges, to do this I looked around the files until I found one called 'suspicious.pcapng'
 
@@ -69,20 +73,17 @@ https://tryhackme.com/room/startup
 
 • I analysed it through wireshark, which allowed me to find out that someone else had used a reverse shell to get into the target machine
 
-
-<!--- INSERT WIRESHARK IMAGE --->
+![image](https://github.com/jodie9779/Cyber-Security-Portfolio/blob/main/images/startup/startup%20pcap%20port%20.png)
 
 • I exported the data as plaintext, then searched for the word 'password' which gave me Lennie's password
 
-<!--- INSERT PLAINTEXT IMAGE --->
+![image](https://github.com/jodie9779/Cyber-Security-Portfolio/blob/main/images/startup/startup%20pcap%20password.png)
 
 • I used SSH to get into Lennie's account, and was able to get the flag from 'user.txt'
 
 • My last step was to find a way to gain root access. To do this I had a look around the scripts folder in Lennie's directory
 
 • The scripts folder had a script called planner.sh, which Lennie did not have privileges to edit, however looking at the code it referred to /etc/print.sh
-
-<!--- INSERT IMAGE OF PLANNER.SH --->
 
 • I had a look at print.sh, which Lennie could edit, and changed it to a reverse shell which I got from revshells.com
 
